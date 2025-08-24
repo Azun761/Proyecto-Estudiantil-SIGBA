@@ -1,0 +1,169 @@
+        body {
+            margin: 0;
+            background: #e6f4ea;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .top-bar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            background: transparent;
+            z-index: 200;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            height: 56px;
+            background: #3a6b4b;
+            padding: 0 18px 0 12px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            z-index: 202;
+            position: relative;
+        }
+        .logo-img {
+            height: 36px;
+            width: 36px;
+            object-fit: contain;
+        }
+        .minhvi-label {
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.7rem;
+            margin-left: 14px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            white-space: nowrap;
+            letter-spacing: 2px;
+        }
+        .sidebar.open ~ .top-bar .menu-btn {
+            left: 230px;
+        }
+        .logo-container.show-label .minhvi-label,
+        .sidebar.open .minhvi-label {
+            opacity: 1;
+        }
+        .menu-btn {
+            background: #7ecfa7;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 14px;
+            cursor: pointer;
+            font-size: 18px;
+            z-index: 400;
+            position: absolute;
+            left: 16px;
+            top: 10px;
+            transition: left 0.4s;
+        }
+        /* Oculta el logo y el texto de la top-bar por defecto */
+        .top-bar .logo-container {
+            display: none;
+        }
+        /* Cuando el sidebar está abierto, el logo y texto siguen ocultos */
+        .sidebar.open ~ .top-bar .logo-container {
+            visibility: hidden;
+        }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 220px;
+            background: #3a6b4b;
+            box-shadow: 2px 0 8px rgba(60,120,80,0.08);
+            transform: translateX(-100%);
+            transition: transform 0.4s cubic-bezier(.77,0,.18,1);
+            z-index: 300;
+            padding-top: 0;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar.open {
+            transform: translateX(0);
+        }
+        .sidebar .logo-container {
+            border-radius: 0;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background: #3a6b4b;
+            position: static;
+            z-index: 301;
+            display: flex;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-top: 20px;
+        }
+        .sidebar ul a {
+            padding: 12px 28px;
+            display: block;              /* Ocupa todo el ancho del sidebar */
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 0.98rem;
+            margin-bottom: 12px;         /* Mayor separación entre opciones */
+            border-radius: 6px;          /* Bordes redondeados al resaltar */
+            text-decoration: none;       /* Sin subrayado */
+        }
+        .sidebar ul a:hover {
+            background: #5bb98b;
+        }
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .welcome-title {
+            font-size: 2.8rem;
+            color: #3a6b4b;
+            letter-spacing: 2px;
+            text-align: center;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            .welcome-title {
+                font-size: 2rem;
+            }
+            .sidebar {
+                width: 70vw;
+            }
+        }
+
+.user-info {
+    position: fixed;
+    top: 10px;
+    right: 10px; /* Cambiado de left: 10px; a right: 10px; */
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(60,120,80,0.08);
+    padding: 6px 14px 6px 6px;
+    z-index: 500;
+}
+.user-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 2px solid #3a6b4b;
+}
+.user-name {
+    font-size: 1.1rem;
+    color: #3a6b4b;
+    font-weight: 600;
+}

@@ -1,0 +1,46 @@
+body {
+    background: #e6f4ea; /* Verde muy claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;            
+    height: 100vh;
+    margin: 0;
+}
+.login-container {
+    background: #f8fcf9; /* Fondo casi blanco con toque verde */
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(7, 51, 22, 0.384); /* Sombra verde suave */
+    width: 300px;
+}
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #3a6b4b; /* Verde oscuro suave */
+}
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    box-sizing: border-box; 
+    padding: 8px;
+    margin: 8px 0 16px 0;
+    border: 1px solid #b6d7c9; /* Borde verde claro */
+    border-radius: 4px;
+    background: #eef8f3; /* Fondo verde muy claro */
+    color: #2d4f3a; /* Texto verde oscuro */
+}
+.login-container button {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    background: #7ecfa7; /* Verde claro */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+.login-container button:hover {
+    background: #5bb98b; /* Verde un poco más oscuro al pasar el mouse */
+}
